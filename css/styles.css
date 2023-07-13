@@ -11,6 +11,7 @@
    --ocean: #404BBF;
    --slate: #434455;
    --white: #FFFFFF;
+   --lightslate: #8E8F99;
 }
 h1, h2, h3, h4, h5, h6 {
    margin: 0;
@@ -165,7 +166,13 @@ body {
    letter-spacing: 0.32px;
 }
 .section.main {
-   background-color: #2E2F42;
+   background-image:
+   linear-gradient(rgba(46, 47, 66, 0.7), 
+rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg), 
+   url(../images/main_bg.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
 }
 .main__title {
    color: #fff;
@@ -586,3 +593,25 @@ address a:focus {
    width: calc((100% - 48px) / 3);
 }
 
+.customers-title {
+   text-align: center;
+   padding-top: 120px;
+   font-family: "Roboto";
+   font-size: 36px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 1.1;
+   letter-spacing: 0.02em;
+}
+
+.section.customers {
+}
+.customers-item {
+   display: flex;
+}
+.icon .icon-logo3 {
+   fill: var(--lightslate);
+}
+#icon-Logo3 {
+   fill: black;
+}
