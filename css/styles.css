@@ -49,6 +49,7 @@ body {
 }
 .header {
    border-bottom: 1px solid var(--cornflower);
+   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header .container {
    display: flex;
@@ -68,7 +69,9 @@ body {
    justify-content: space-between;
    align-items: center;
    gap: 40px; 
+   position: relative;
 }
+
 .header__nav {
    display: flex;
    justify-content: space-between;
@@ -83,13 +86,16 @@ body {
 }
 .header__nav .link {
    margin-right: 76px;
+   position: relative;
+   color: #404bbf;
 }
 .list__block.link {
    margin-right: 0;
    padding-top: 24px;
    padding-bottom: 24px;
 }
-.link__rows {
+
+.link__s {
    margin-right: 0;
 }
 .link__rows a:hover {
@@ -100,8 +106,10 @@ body {
 }
 .rows.link {
    margin-right: 0;
+   color:  #404bbf;
    /* padding: 24px 0; */
 }
+
 .section.list {
    padding: 120px 0;
 }
@@ -131,6 +139,11 @@ body {
 .section.main {
    height: 600px;
    padding: 188px 0;
+   max-width: 1440px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   margin: 0 auto;
 }
 
 .list a {
@@ -204,6 +217,7 @@ rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg),
    min-width: 169px;
    height: 56px;
    border: none;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main__button:hover,
 .main__button:focus {
@@ -216,7 +230,16 @@ rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg),
    background-color: var(--ocean);
 }
 
-
+.list-logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 264px;
+   height: 112px;
+   background-color: #f4f4fd;
+   border-radius: 4px;
+   margin-bottom: 8px;
+}
 
 .section .container .list {
    display: flex;
@@ -316,7 +339,6 @@ rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg),
 }
 .section.team .list {
    display: flex;
-   gap: 24px;
 }
 
 .list__title {
@@ -324,7 +346,7 @@ rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg),
    margin-bottom: 8px;
 }
 .team__subitem {
-   padding: 32px 16px;
+   padding: 32px 0;
 }
 .team__item {
    background-color: #fff;
@@ -334,9 +356,39 @@ rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg),
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: 24px;
    border-radius: 0px 0px 4px 4px;
+   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);;
 
+}
+.team__subitem {
+   padding: 32px 0;
+}
+.team-icons {
+   display: flex;
+   justify-content: center;
+   column-gap: 24px;
+}
+.svg {
+   width: 40px;
+   height: 40px;
+}
+.svg-link {
+   width: 100%;
+   height: 100%;
+   background-color: var(--iris);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.svg-link:hover,
+.svg-link:focus {
+   background-color: var(--ocean);
+}
+.team-descr {
+   text-align: center;
+   padding-bottom: 8px;
 }
 .footer {
    color: #fff;
@@ -421,6 +473,20 @@ rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg),
    line-height: 1.5;
    letter-spacing: 0.02em;
    color: var(--navyblue);
+}
+
+.current {
+   position: relative;
+   color: var(--ocean);
+}
+.current::after {
+   content: "";
+   position: absolute;
+   bottom: -1px;
+   left: 0;
+   width: 46px;
+   height: 4px;
+   background-color: var(--ocean);
 }
 .list__text {
    font-weight: 500;
@@ -595,23 +661,38 @@ address a:focus {
 
 .customers-title {
    text-align: center;
-   padding-top: 120px;
    font-family: "Roboto";
    font-size: 36px;
    font-style: normal;
    font-weight: 700;
-   line-height: 1.1;
+   line-height: 1.11;
    letter-spacing: 0.02em;
+   color: var(--navyblue);
+   margin-bottom: 72px;
 }
-
+.customers-list {
+   display: flex;
+   gap: 24px;
+}
+.private {
+   list-style-type: none;
+}
+.subitem {
+   display: flex;
+   flex-direction: column;
+}
 .section.customers {
+   padding: 120px 0px;
 }
 .customers-item {
    display: flex;
 }
-.icon .icon-logo3 {
-   fill: var(--lightslate);
+.icon .icon {
+   fill: var(--cloud);
 }
 #icon-Logo3 {
    fill: black;
+}
+.icon .icon {
+   fill: var(--cloud);
 }
