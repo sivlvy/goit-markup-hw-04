@@ -139,7 +139,7 @@ body {
    display: flex;
    align-items: center;
 }
-.section.main {
+.section.main .container {
    height: 600px;
    padding: 188px 0;
    max-width: 1440px;
@@ -805,4 +805,10 @@ address a:focus {
 .icon-close-modal:hover,
 .icon-close-modal:focus {
    fill: #ffffff;
+}
+.list__block:first-child a {
+   color: #404bbf;
+}
+.icon .icon {
+   fill: #f4f4fd;
 }
