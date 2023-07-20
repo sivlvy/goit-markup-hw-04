@@ -375,6 +375,10 @@ body {
    width: 40px;
    height: 40px;
 }
+
+.svg svg {
+   fill: var(--cloud);
+}
 .svg-link {
    width: 100%;
    height: 100%;
@@ -387,7 +391,10 @@ body {
 }
 .svg-link:hover,
 .svg-link:focus {
-   background-color: var(--ocean);
+   background-color: #31d0aa;
+}
+.icon-footer {
+   fill: var(--cloud);
 }
 .team-descr {
    text-align: center;
@@ -532,18 +539,21 @@ address a:focus {
    background-color: #F4F4FD;
    text-align: center;
    border: none;
-   cursor: pointer
+   cursor: pointer;
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .categories__btn:hover {
    background-color: #404BBF;
    color: #ffffff;
    border: 1px solid transparent;
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); ;
 }
 .categories__btn:focus {
    background-color: #404BBF;
    color: #ffffff;
    border: 1px solid transparent;
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
 }
 .list ul {
    list-style-type: none;
@@ -568,6 +578,7 @@ address a:focus {
    line-height: 1.5;
    letter-spacing: 0.02em;
    color: var(--slate);
+
 }
 .footer__logo {
    font-family: "Raleway",sans-serif;
@@ -602,7 +613,7 @@ address a:focus {
    padding-top: 96px;
    padding-bottom: 120px;
 }
-.section.categories .list.one {
+.section.categories .list.first {
    display: flex;
    justify-content: center;
    align-items: flex-start;
@@ -650,6 +661,10 @@ address a:focus {
 .list .width {
    width: calc((100% - 48px) / 3);
 }
+.list .width:hover .link__descr
+.list .width:focus .link__descr {
+   transform: translateY(0%);
+}
 
 .customers-title {
    text-align: center;
@@ -696,7 +711,7 @@ address a:focus {
    color: var(--ocean);
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.current::after {
+.current-index::after {
    content: '';
    position: absolute;
    bottom: -1px;
@@ -797,6 +812,7 @@ address a:focus {
 .close-modal:focus {
    background-color: #404bbf;
    border: none;
+   fill: #ffffff;
 
 }
 .icon-close-modal {
@@ -806,9 +822,48 @@ address a:focus {
 .icon-close-modal:focus {
    fill: var(--white);
 }
-.list__block:first-child a {
+.rows.link.current-index {
    color: #404bbf;
 }
 .icon .icon {
    fill: var(--cloud);
+}
+.rows.link.current-portfolio {
+   color: #404bbf;
+}
+.rows.link.current-portfolio::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -1px;
+   height: 4px;
+   background-color: var(--ocean);
+   border-radius: 2px;
+   width: 66px;
+}
+.second-link {
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.second-link:hover,
+.second-link:focus {
+   
+   box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.box-overlay {
+   position: relative;
+   overflow: hidden;
+}
+.paragraph.overlay {
+   position: absolute;
+   top: 0;
+   font-size: 16px;
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+   color: var(--cloud);
+   padding: 40px 32px;
+   background-color: #4d5ae5;
+   height: 100%;
+   width: 100%;
+   transform: translateY(100%);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
