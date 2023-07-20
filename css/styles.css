@@ -12,6 +12,7 @@
    --slate: #434455;
    --white: #FFFFFF;
    --lightslate: #8E8F99;
+   --green: #31d0aa;
 }
 h1, h2, h3, h4, h5, h6 {
    margin: 0;
@@ -391,7 +392,7 @@ body {
 }
 .svg-link:hover,
 .svg-link:focus {
-   background-color: #31d0aa;
+   background-color: var(--green);
 }
 .icon-footer {
    fill: var(--cloud);
