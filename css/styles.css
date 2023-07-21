@@ -1,5 +1,5 @@
 .container {
-   max-width: 1158px;
+   width: 1158px;
    margin: 0 auto;
    padding: 0 15px;
 }
@@ -651,7 +651,6 @@ address a:focus {
 .list.second img {
 }
 .list.second .link__title {
-   padding-top: 32px;
    margin-bottom: 8px;
 }
 .link__descr {
@@ -855,6 +854,8 @@ address a:focus {
    overflow: hidden;
 }
 .paragraph.overlay {
+   font-family: 'Roboto';
+   font-weight: 400;
    position: absolute;
    top: 0;
    font-size: 16px;
